@@ -8,13 +8,16 @@ package edu.usf.mail.rothm.vidyagame;
 
 import java.util.Scanner;
 
+import edu.usf.mail.rothm.vidyagame.entities.Player;
+
 public class vidyaGame
 {
 	public static void main(String[] args)
 	{
 		Scanner scan = new Scanner(System.in);
 
-		String name;
+		Player player = new Player();
+
 		int Str = 0;
 		int Int = 0;
 		int Lck = 0;
@@ -26,9 +29,9 @@ public class vidyaGame
 		System.out.println("***************************************");
 		System.out.println();
 		System.out.print("Enter your name: ");
-		name = scan.nextLine();
+		player.setName(scan.nextLine());
 		System.out.println();
-		System.out.print("Welcome to the world of Carrmuck " +name +"."
+		System.out.print("Welcome to the world of Carrmuck " + player.getName() +"."
 						+ " The land has been ravaged by the hundred beard war, and he who has the most magnificent beard rules. " 
 						+ "You are but a lowly courier on a simple errand to deliver a parcel to"
 						+ " General Ideeya. This is were your story begins...");
